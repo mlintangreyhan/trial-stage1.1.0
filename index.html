@@ -1,0 +1,244 @@
+<!--HTML WEB-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Galaxy1.1.0.com</title>
+</head>
+<body>
+  <style>
+    /* ALL STYLE WEB */
+    body {
+      margin: 0;
+      background: black;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      color: rgb(130,130,130);
+      text-align: center;
+      opacity: 0;
+      animation: fadeInPage 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeInPage {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1, h2, h3, p {
+      color: rgb(130,130,130);
+      margin: 10px 0;
+      opacity: 0;
+      animation: fadeInContent 1.5s ease-in-out forwards;
+    }
+
+    .top-image, .card, .info-box {
+      opacity: 0;
+      animation: fadeInContent 1.5s ease-in-out forwards;
+    }
+
+    .top-image { animation-delay: 0.3s; }
+    h1:first-of-type { animation-delay: 0.5s; }
+    p:first-of-type { animation-delay: 0.6s; }
+    .card-container { animation-delay: 0.7s; }
+    .info-box { animation-delay: 0.9s; }
+
+    @keyframes fadeInContent {
+      to { opacity: 1; }
+    }
+
+    .stars {
+      position: fixed;
+      width: 100%; height: 100%;
+      top: 0; left: 0;
+      background: url('https://www.transparenttextures.com/patterns/stardust.png');
+      animation: starsMove 25s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes starsMove {
+      from {background-position: 0 0;}
+      to {background-position: 1000px 1000px;}
+    }
+
+    nav {
+      position: fixed; top: 0; width: 100%;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      padding: 8px 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex; justify-content: center; gap: 30px;
+      list-style: none; padding: 0; margin: 0;
+    }
+
+    .top-image {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 120px auto 20px auto;
+      border-radius: 12px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 20px; padding: 20px;
+      justify-items: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 20px; border-radius: 15px;
+      text-align: center; backdrop-filter: blur(10px);
+      transition: 0.4s;
+      width: 100%;
+      max-width: 350px;
+    }
+
+    .card:hover { transform: translateY(-8px) scale(1.03); border: 1px solid white; }
+    .card img { width:100%; border-radius: 12px; margin-bottom: 10px; }
+
+    .btn {
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 15px;
+      background: grey;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+    .btn:hover { transform: scale(1.1); }
+
+    .modal {
+      position: fixed; display: none;
+      width: 100%; height: 100%;
+      top: 0; left: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px);
+      justify-content: center; align-items: center;
+      z-index: 9999;
+    }
+
+    .modal-content {
+      background: rgba(20,20,20,0.9);
+      padding: 25px; border-radius: 15px;
+      max-width: 600px; width: 90%;
+      text-align: center; border: 1px solid white;
+      animation: fadeIn 0.5s;
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0; transform: scale(0.5);}
+      to {opacity:1; transform: scale(1);}
+    }
+
+    .close {
+      float: right; font-size: 25px;
+      cursor: pointer; color: grey;
+    }
+
+    .info-box {
+      background: rgb(48,48,48); 
+      padding: 20px; 
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 600px;
+    }
+  
+  </style>
+
+<div class="stars"></div>
+
+<!--HALAMAN UTAMA-->
+<img src="ngoding/Logo2.jpg" class="top-image" alt="Galaxy Logo">
+
+<h1>What is a galaxy?</h1>
+<p style="padding: 0 20px;">
+ A galaxy is a massive collection of stars, gas, dust, and dark matter bound together by gravity. Galaxies are one of the primary structures of the universe and can contain billions to trillions of stars, along with planets, nebulae, and other celestial objects.
+</p>
+<br><br>
+<h1>Below is a brief description of the various galaxies</h1>
+
+<!--CARD FOTO GALAKSI DAN DESKRIPSI-->
+<div class="card-container">
+
+  <div class="card">
+    <img src="ngoding/bima_sakti.g.png">
+    <h3>Milky Way Galaxy</h3>
+    <p>The Milky Way is a spiral galaxy containing our Solar System, containing hundreds of billions of stars and measuring approximately 100,000–120,000 light-years in diameter. It has luminous spiral arms spiraling from a central core and a supermassive black hole at the core, Sagittarius A*. Earth is located in one of these spiral arms, the Orion Arm. The Milky Way is home to the formation of stars, planets, and other cosmic objects and is one of the primary structures of the universe.</p>
+  </div>
+
+  <div class="card">
+    <img src="ngoding/andromeda.jpg">
+    <h3>Andromeda Galaxy</h3>
+    <p>Andromeda is the largest spiral galaxy in the Local Group of galaxies, with a diameter of about 220,000 light-years, larger than the Milky Way. It contains trillions of stars and is expected to collide with the Milky Way in the next 4–5 billion years. Located about 2.5 million light-years from Earth, Andromeda is an important object for studying the evolution of spiral galaxies and galaxy interactions.</p>
+  </div>
+
+  <div class="card">
+    <img src="ngoding/sombrero.jpg">
+    <h3>Sombrero Galaxy</h3>
+<p>The Sombrero Galaxy is notable for its Mexican hat-like shape, with a bright disk and dark dust ring surrounding a very bright core, likely containing a supermassive black hole. The galaxy is about 50,000 light-years in diameter and lies about 31 million light-years from Earth in the constellation Virgo. The Sombrero is an example of a spiral galaxy with a distinct structure, aiding scientists in studying star formation and cosmic dust.</p>
+  </div>
+
+  <div class="card">
+    <img src="ngoding/Triangulum (1).jpg">
+    <h3>Triangulum Galaxy</h3>
+    <p>Triangulum is a smaller spiral galaxy, about 60,000 light-years in diameter, but still harbors hundreds of billions of stars. It has luminous spiral arms with many young stars and an active star-forming region. Located about 3 million light-years from Earth within the Local Group of Galaxies, Triangulum is often studied as an example of a small spiral galaxy and the gravitational interactions between neighboring galaxies.</p>
+  </div>
+  
+  <div class="card">
+    <img src="ngoding/Whirlpool.jpg">
+    <h3>Whirlpool Galaxy</h3>
+    <p>The Whirlpool Galaxy, or M51, is a grand-design spiral galaxy famous for its very distinct and symmetrical spiral arms. Located about 23–30 million light-years from Earth, this galaxy is gravitationally interacting with its companion galaxy, NGC 5195. This interaction causes distortions and material compression in its spiral arms, triggering star formation activity. The Whirlpool Galaxy contains hundreds of billions of stars, with many regions of its spiral arms shining brightly due to young stars and nebulae. It is often studied to understand how galaxy interactions trigger star formation and how spiral arm structures form.</p>
+  </div>
+  
+  <div class="card">
+    <img src="ngoding/IC342.jpg">
+    <h3>IC 342</h3>
+    <p>IC 342, sometimes called the "Hidden Galaxy," is an intermediate-type spiral galaxy located in the Camelopardalis constellation. It is approximately 10–11 million light-years from Earth and has a diameter of around 150,000 light-years, slightly larger than many typical spiral galaxies. Despite its size and brightness, IC 342 is difficult to observe because it lies behind dust and gas in our own galaxy. This galaxy is often studied to understand disk structure, star formation, and how dust and gas affect a galaxy's visibility from Earth.</p>
+  </div>
+  
+  <div class="card">
+    <img src="ngoding/M87.jpg">
+    <h3>Messier 87/Virgo A</h3>
+    <p>Messier 87, or M87, is a supergiant elliptical galaxy located at the center of the Virgo Cluster. It is about 53–60 million light-years from Earth, with a diameter of roughly 132,000 light-years. M87 has an active galactic nucleus containing a supermassive black hole that emits a relativistic gas jet visible outside the galaxy. Additionally, it hosts an exceptionally large number of globular clusters, indicating a long history of accreting and merging smaller galaxies. M87 is crucial for studying the evolution of giant galaxies, supermassive black holes, and galaxy interactions within clusters.</p>
+  </div>
+</div>
+<br>
+
+<!--KONTEN--->
+<div class="info-box">
+  <h1>Website Founder</h1>
+  <p>Students of SMKN 2 Bandar Lampung</p>
+  <br>
+  <h1>Supported</h1>
+  <p>•Ministry of Education</p>
+  <p>•Astronomy science</p>
+  <br>
+  <p>This website aims to educate the galaxy such as</p>
+  <br>
+  <p>Milky Way</p>
+  <p>Andromeda Galaxy</p>
+  <p>Sombrero Galaxy</p>
+  <p>Triangulum Galaxy</p>
+  <p>Whirlpool Galaxy</p>
+  <p>IC 342</p>
+  <P>Messeir 87/Virgo A</P>
+  <br>
+  <p>Join the Galaxy community</p>
+  <h2>@Galaxy Community</h2>
+  <br>
+  <p>1.1.0</p>
+  <p>Trial stage</p>
+</div>
+
+</body>
+</html>
